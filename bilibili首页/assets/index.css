@@ -1,0 +1,305 @@
+:root, body{
+	height: 100%;
+}
+
+#app{
+	height: 100%;
+	overflow-y: scroll;
+}
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 8px;
+	padding-bottom: 15px;
+	background-color: #fff;
+}
+
+.header .logo{
+	margin-left: 18px;
+}
+
+.header .search-input{
+	display: flex;
+	align-items: center;
+	width: 132px;
+	height: 24px;
+	margin-left: 5px;
+	font-size: 10px;
+	color: #999;
+	background-color: #f4f4f4;
+	border-radius: 12px;
+}
+
+.header .search-input svg{
+	margin-left: 10px;
+}
+
+.header .search-input span{
+	width: 92px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.header .avatar svg{
+	border-radius: 50%;
+}
+
+.header .download-app{
+	width: 78px;
+	height: 23px;
+	line-height: 23px;
+	padding: 0 5px;
+	margin-right: 12px;
+	text-align: center;
+	color: #fff;
+	background-color: #fb7299;
+	font-size: 14px;
+	border-radius: 2px;
+}
+
+
+/* 导航区 */
+.nav-box{
+	position: fixed;
+	top: 52px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background-color: #fff;
+}
+
+.nav-box .nav-list{
+	width: 85%;
+	white-space: nowrap;
+	padding-left: 15px;
+	overflow-x: scroll;
+}
+
+.nav-box .nav-list::-webkit-scrollbar{
+	display: none;
+}
+
+.nav-box .nav{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 32px;
+	color: #757575;
+	font-size: 14px;
+	border-bottom: 2px solid transparent;
+}
+
+.nav-box .nav.active{
+	border-color: #fb7299;
+	color: #fb7299;
+}
+
+.nav-box .down{
+	position: absolute;
+	top: 0px;
+	right: 12px;
+}
+
+.hide-nav-box{
+	position: fixed;
+	top: 52px;
+	left: 0;
+	right: 0;
+	transition: top .3s;
+	background-color: #fff;
+	padding-bottom: 20px;
+	z-index: 2;
+}
+
+.hide-nav-box.hide{
+	top: -118px;
+}
+
+.hide-nav-box .nav{
+	display: inline-block;
+	font-size: 14px;
+	width: 32px;
+	text-align: center;
+	padding: 6px 0;
+	margin: 0 14px;
+	margin-bottom: 10px;
+	color: #757575;
+	border-bottom: 2px solid transparent;
+}
+
+.hide-nav-box .nav.big{
+	width: 46px;
+	margin: 0 7px;
+}
+
+.hide-nav-box .nav.active{
+	border-color: #fb7299;
+	color: #fb7299;
+}
+
+.hide-nav-box .up{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	
+}
+
+
+/* 轮播区域 */
+.banner-box{
+	position: relative;
+	top: 90px;
+	width: 350px;
+	height: 110px;
+	overflow: hidden;
+	border-radius: 6px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.banner-box .banner-list{
+	position: absolute;
+	left: 0;
+	transition: left .7s;
+	width: calc(350px * 4);
+}
+
+.banner-box .banner{
+	width: 350px;
+	height: 110px;
+	float: left;
+}
+
+.banner-box .banner .poster{
+	width: 100%;
+	height: 100%;
+}
+
+/* 轮播图小圆点 */
+.banner-box .index-list{
+	position: absolute;
+	bottom: 3px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	height: 10px;
+	padding: 0 3px;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, .5);
+	
+}
+
+.banner-box .index-list .index{
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	margin: 0 3px;
+	background-color: #fff;
+}
+
+.banner-box .index.active{
+	background-color: #fb7299;
+}
+
+
+/* 视频列表区域 */
+
+.video-box {
+	padding: 0 6px;
+	padding-top: 100px;
+}
+
+.video-box .video-list{
+	
+}
+
+.video-box .video-list::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.video-box .video{
+	float: left;
+	width: 50%;
+}
+
+.video-box .poster{
+	position: relative;
+	height: 106px;
+	margin: 0 6px;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.video-box .poster img{
+	height: 100%;
+	width: 100%;
+}
+
+.video-box .poster .info{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 20px;
+	padding: 7px 0 3px 10px;
+	color: #fff;
+	font-size: 13px;
+	background-image: linear-gradient(rbga(33, 33, 33, 0), rbga(33, 33, 33, .5));
+}
+
+.video-box .info div{
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+}
+
+.video-box .info svg{
+	margin-right: 3px;
+	width: 14px;
+	height: 14px;
+	fill: #fff;
+}
+
+.video-box .info .rank{
+	position: absolute;
+	right: 8px;
+}
+
+.video-box .title{
+	margin: 6px 6px 10px;
+	height: 38px;
+	line-height: 20px;
+	font-size: 13px;
+	overflow: hidden;
+	
+	/* 伸缩盒 */
+	display: -webkit-box;
+	/* 伸缩盒内子元素排列方式 为垂直 */
+	-webkit-box-orient: vertical;
+	/* 限制一个块元素内显示的文本行数 */
+	-webkit-line-clamp: 2;
+}
+
+
+/* 底部区域 */
+.footer{
+	margin-top: 40px;
+}
+
+.footer p{
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 13px;
+	color: #999;
+}
